@@ -14,21 +14,21 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 
 class Stack {
-
-  constructor () {    
-    this.arrForStack = [];  
+  constructor() {
+    this.arr = []
   }
-
   push(element) {
-    return this.arrForStack.push(element);
+    this.arr.push(element)
   }
 
   pop() {
-    return this.arrForStack.pop();
+    
+    return this.arr.pop()
   }
 
   peek() {
-    return this.arrForStack[this.arrForStack.length - 1];
+    let lastEl = this.arr.length - 1
+    return this.arr[lastEl]
   }
 }
 
