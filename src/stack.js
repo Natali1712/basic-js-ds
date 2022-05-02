@@ -12,22 +12,25 @@ const { NotImplementedError } = require('../extensions/index.js');
  * stack.pop(); // undefined
  *
  */
+
 class Stack {
-  stackBody = [];
+
+  constructor () {    
+    this.arrForStack = [];  
+  }
 
   push(element) {
-    this.stackBody.push(element);
+    return this.arrForStack.push(element);
   }
 
   pop() {
-    return this.stackBody.pop();
+    return this.arrForStack.pop();
   }
 
   peek() {
-    return this.stackBody[this.stackBody.length - 1];
+    return this.arrForStack[this.arrForStack.length - 1];
   }
 }
-
 
 module.exports = {
   Stack
